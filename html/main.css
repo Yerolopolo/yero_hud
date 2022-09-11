@@ -1,0 +1,116 @@
+﻿*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    margin: 0;
+    padding: 0;
+}
+
+body,html { width: 100%; height: 100%;
+
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+                              
+
+}
+
+
+#ui { position: relative; width: 100%; height: 100%; overflow: hidden; }
+div.separator { display: block; clear: both; width: 100%; }
+
+
+
+
+.icon { display: block; position: relative; padding: 10px 8px; margin: 10px 5px 0 5px; width: 30px; height: 30px; border-radius: 10px; overflow: hidden; background: rgba(0,0,0,0.75); }
+
+.icon i { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); color: #FFF; z-index: 11; font-size: 15px; }
+.icon img { width: 16px; margin: -3px 0 0 0; }
+.icon span {display: block; position: absolute; left: 50%; bottom: 0; transform: translate(-50%,0); width: 100%; height: 100%; }
+
+.icon.text { display: inline-block; overflow: visible; width: auto; padding: 0; }
+.icon.text i { /*display: inline-block;*/ float: left; transform: translate(0%,0%); left: 0; top: 0; position: relative; padding: 10px 8px; width: 30px; height: 30px; border-radius: 10px; color: #FFF; }
+.icon.text i:before { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); }
+.icon.text span { position: relative; width: auto; height: auto; left: 0; transform: translate(0,0); display: inline-block; font-size: 12px; padding: 7px 15px 0 10px; font-weight: 700; color: #FFF; }
+
+
+.icon.dying:not(.customstatus) span { animation: yero-status-blink 500ms infinite; }
+.icon.pulse i { animation: yero-pulse 500ms 1; }
+
+
+
+
+.info { position: absolute; }
+
+.info.server { top: 25px; right: 25px; width: 150px; height: 150px; }
+.info.server #server img { max-width: 100%; opacity: .5; }
+
+.info.player { bottom: 30px; right: 5px; text-align: right;}
+
+.info.player #status { clear: both; 
+
+    color: #ffffff;
+    width: 30px;
+    padding-top: 0vh;
+    padding-left: 0.26vh;  /*0.26vh*/
+    padding-right: 0.26vh; /*0.26vh*/
+    text-align: center;
+    margin-top: 0.3vh;
+    border-radius: 10px;
+    font-size: 1.2vh;
+    letter-spacing: 1px;}
+
+.info.player #status ul li { float: right;}
+.info.player #status ul li#health span { background: linear-gradient(180deg, #531363 0%, #aa0000 100%); }
+.info.player #status ul li#drunk span { background: linear-gradient(180deg, #531363 0%, #aa0000 100%); }
+.info.player #status ul li#stress span { background: linear-gradient(180deg, #531363 0%, #aa0000 100%); }
+.info.player #status ul li#hunger span { background: linear-gradient(180deg, #531363 0%, #aa0000 100%); }
+.info.player #status ul li#thirst span { background: linear-gradient(180deg, #531363 0%, #aa0000 100%); }
+.info.player #status ul li#health.dead { animation: yero-pulse 500ms infinite; }
+.info.player #status ul li#health.dead span { height: 0 !important; }
+.info.player #status ul li#health.dead i.fas:before { content: '\f714'; }
+
+
+
+
+@keyframes yero-soundwave {
+    0% { box-shadow: 0 0 0 0px rgba(255,255,255,0.75); }
+    100% { box-shadow: 0 0 0 25px rgba(255,255,255,0); }
+}
+
+@keyframes yero-status-blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes yero-pulse {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+@keyframes yero-rainbow{
+        100%,
+        0%{ background: rgba(255,0,0,0.70); }
+        8%{ background: rgba(255,127,0,0.70); }
+        16%{ background: rgba(230,205,23,0.70); }
+        25%{ background: rgba(127,255,0,0.70); }
+        33%{ background: rgba(0,255,0,0.70); }
+        41%{ background: rgba(0,255,127,0.70); }
+        50%{ background: rgba(0,255,255,0.70); }
+        58%{ background: rgba(0,127,255,0.70); }
+        66%{ background: rgba(0,0,255,0.70); }
+        75%{ background: rgba(127,0,255,0.70); }
+        83%{ background: rgba(255,0,255,0.70); }
+        91%{ background: rgba(255,0,127,0.70); }
+}
+
