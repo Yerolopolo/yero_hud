@@ -8,7 +8,7 @@ Config.healthRegen 		= false -- Toggle health regeneration, default = false
 Config.ui = {  -- Enable/Disable HUD elements
 	showHealth			= true,
 	showDrunk	 		= true,
-	showStress	 		= false, -- Requires yero_status
+	showStress	 		= false, -- Requires yero_basicneeds
 	showHunger 			= true,
 	showThirst	 		= true,
 
