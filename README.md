@@ -52,4 +52,4 @@ At what percentage should the HUD show every element?
 - **thirstPercent** From 0 to 100, default is *35* (Less than)
 
 ## Support
-Feel free to ask me anything on my discord (**Yero#0001**).
+Feel free to ask me anything on my discord (**yero_**).
